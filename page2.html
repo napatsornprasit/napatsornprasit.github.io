@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Lines&display=swap" rel="stylesheet">
+    <style>
+        p {
+            font-family: 'Rubik+Lines', sans-serif;
+            /* If the primary font is not available, it will fall back to a generic sans-serif font */
+        }
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+            overflow: hidden;
+            margin: 0; /* Reset the default margin */
+        }
+        .card-container {
+            perspective: 1000px;
+            perspective-origin: center;
+            height: calc(150vh + 5cm); /* Adjust the height as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0; /* Reset the default margin */
+            position: relative; /* Make the card container a relative position */
+            top: -400px; /* Adjust the top position to move the card up */
+        }
+        .card {
+            width: 300px;
+            position: relative;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+        }
+        .card-flip {
+            transform: rotateY(-180deg);
+        }
+        .christmas-tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #58D68D;
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            height: 400px; /* Adjust the height as needed */
+        }
+        .row {
+            display: flex;
+        }
+        .spacer {
+            flex-grow: 1;
+        }
+        .trunk {
+            margin-top: 10px;
+        }
+        .star {
+            color: yellow;
+            font-size: 24px;
+            margin-bottom: -10px;
+        }
+        .transparent-text {
+            background-color: #E74C3C;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            padding: 20px 5px; /* Adjust the vertical padding to make it longer */
+            border-radius: 0px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%; /* Set width to cover the entire length of the card */
+        }
+        .action-button {
+            background-color: #58D68D;
+            color: black;
+            padding: 10px;
+            margin-top: 25px; /* Adjust the margin-top to move the button higher */
+            margin-bottom: 40px; /* Add margin-bottom to separate the button from text */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1; /* Ensure the button is above other elements */
+            position: relative; /* Ensure the button is positioned relative to its container */
+            width: 100%; /* Make the button fill the entire width */
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <div class="christmas-tree">
+                <p>
+                    &nbsp;
+                </p>
+                <p>
+                    <i class="fa fa-tree" aria-hidden="true"></i>
+                    
+                </p>
+                <p>
+                    Merry Christmas na kub
+                </p>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;มีความสุขมากๆนะคับ นี่เป็นวันคริสต์มาสครั้งเเรกของเราสองคน 
+                    ขอให้หัวใจของเธออบอุ่นท่ามกลางลมหนาวในเทศกาลที่เธอชอบนะคับ หวังว่าเธอจะชอบของขวัญเค้าน้า รักเธอคับ
+                </p>
+                
+                
+
+                
+                
+                
+                <div class="transparent-text">สุขสันต์วันคริสต์มาส</div>
+                <button class="action-button" onclick="window.location.href='page1.html'">
+                    <i class="fas fa-gift"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content specific to Page 2 goes here -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Clear the flipped state when navigating to page 2
+            localStorage.removeItem('isCardFlipped');
+        });
+
+        function goToPage1() {
+            window.location.href = 'page1.html';
+        }
+    </script>
+</body>
+</html>
